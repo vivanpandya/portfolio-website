@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Vivan Pandya</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h2 class="logo">VP</h2>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <a href="assets/resume.pdf" class="btn glow">Download CV</a>
+</header>
+
+<!-- CONTACT -->
+<section class="contact-section">
+
+  <p class="section-tag">CONTACT</p>
+
+  <h1 class="section-title">
+    Got A Project? <span>Let's Talk</span>
+  </h1>
+
+  <div class="contact-container">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+
+      <p>
+        I'm actively looking for internship opportunities and open to 
+        collaborating on interesting projects. Feel free to reach out!
+      </p>
+
+      <div class="contact-box">
+        <i class="fas fa-envelope"></i>
+        <span>vivan.pandya15@gmail.com</span>
+      </div>
+
+      <div class="contact-box">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/vivan-pandya-6b9199327/" target="_blank">
+          Vivan Pandya
+        </a>
+      </div>
+
+      <div class="contact-box">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/vivanpandya" target="_blank">
+          github.com/vivanpandya
+        </a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="contact-form">
+
+      <form action="https://formspree.io/f/maqawqrw" method="POST">
+
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="your@email.com" required>
+
+        <label>Message</label>
+        <textarea name="message" placeholder="Your message..." required></textarea>
+
+        <input type="hidden" name="_subject" value="New Portfolio Message 🚀">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" class="btn glow">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 Vivan Pandya. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
