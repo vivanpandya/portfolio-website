@@ -513,7 +513,7 @@ body::before {
 /* SAME GRID AS PROJECTS */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
   gap: 25px;
 }
 
@@ -589,7 +589,25 @@ body::before {
   box-shadow: 0 0 40px rgba(99,102,241,0.3);
 }
 
-/* PROJECTS */
+@media (max-width: 1200px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PROJECTS SECTION */
 .projects-section {
   padding: 80px 60px;
   text-align: center;
