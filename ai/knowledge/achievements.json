@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "title": "Achievements & Milestones",
+    "description": "A collection of academic, technical, and professional achievements that demonstrate continuous learning, project development, and commitment to software engineering."
+  },
+
+  "highlights": [
+    {
+      "title": "Professional Portfolio Website",
+      "category": "Project",
+      "description": "Designed and developed a modern, responsive personal portfolio with glassmorphism UI, interactive animations, AI-powered chatbot integration, and modular architecture.",
+      "status": "Completed",
+      "year": 2026
+    },
+    {
+      "title": "Lost & Found Management System",
+      "category": "Software Project",
+      "description": "Built a full-stack Lost & Found platform featuring secure authentication, PostgreSQL database integration, image uploads, and an administrator dashboard.",
+      "status": "Completed",
+      "year": 2026
+    },
+    {
+      "title": "AI Portfolio Assistant",
+      "category": "Artificial Intelligence",
+      "description": "Developed an AI-powered chatbot using Ollama, modular architecture, local knowledge base, and recruiter-focused conversational capabilities.",
+      "status": "In Progress",
+      "year": 2026
+    }
+  ],
+
+  "academic": [
+    {
+      "title": "Bachelor of Technology",
+      "organization": "Pandit Deendayal Energy University",
+      "description": "Currently pursuing Computer Science Engineering with a focus on software development, artificial intelligence, databases, and full stack technologies.",
+      "status": "Ongoing"
+    }
+  ],
+
+  "technical": [
+    {
+      "title": "Modern Full Stack Development",
+      "description": "Developed multiple responsive web applications using modern frontend and backend technologies while following clean architecture and modular design principles."
+    },
+    {
+      "title": "Software Architecture",
+      "description": "Applied modular architecture, reusable components, separation of concerns, and clean coding practices across multiple personal projects."
+    }
+  ],
+
+  "futureGoals": [
+    "Secure a Software Engineering Internship.",
+    "Contribute to impactful open-source projects.",
+    "Develop production-grade AI applications.",
+    "Master System Design and scalable backend development.",
+    "Become a Full Stack Software Engineer."
+  ]
+}

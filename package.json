@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "index.html",
+  "scripts": {
+    "serve": "python run.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivanpandya/portfolio-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/vivanpandya/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/vivanpandya/portfolio-website#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}

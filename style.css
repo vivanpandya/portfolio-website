@@ -166,19 +166,31 @@ body > :where(:not(script, .floating-orb)) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   min-height: 52px;
   padding: 0 24px;
   border-radius: 16px;
+  border: 1px solid transparent;
   text-decoration: none;
   font-weight: 600;
   font-size: 15px;
   line-height: 1.2;
   letter-spacing: 0.01em;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
 }
 
 .btn:hover {
   transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid #e0f2fe;
+  outline-offset: 4px;
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 .btn.glow {
@@ -230,6 +242,50 @@ body > :where(:not(script, .floating-orb)) {
   box-shadow:
     inset 0 0 0 rgba(255,255,255,0.15),
     0 0 24px rgba(56,189,248,0.18);
+}
+
+.btn.ai-cta {
+  position: relative;
+  overflow: hidden;
+  color: #f8fbff;
+  background:
+    linear-gradient(135deg, rgba(76, 201, 240, 0.18), rgba(123, 97, 255, 0.2)),
+    rgba(255,255,255,0.055);
+  border-color: rgba(76, 201, 240, 0.42);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.06),
+    0 0 22px rgba(76, 201, 240, 0.14);
+}
+
+.btn.ai-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(76,201,240,0.16), rgba(255,255,255,0.06));
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.btn.ai-cta:hover {
+  border-color: rgba(125, 211, 252, 0.78);
+  background:
+    linear-gradient(135deg, rgba(76, 201, 240, 0.24), rgba(123, 97, 255, 0.26)),
+    rgba(255,255,255,0.07);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.08),
+    0 0 28px rgba(76, 201, 240, 0.22);
+}
+
+.btn.ai-cta:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.btn.ai-cta i,
+.btn.ai-cta span {
+  position: relative;
+  z-index: 1;
 }
 
 /* DOWNLOAD BUTTON */
@@ -386,7 +442,7 @@ body > :where(:not(script, .floating-orb)) {
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
   margin: 32px 0 28px;
   position: relative;
@@ -396,9 +452,13 @@ body > :where(:not(script, .floating-orb)) {
 .buttons .btn {
   white-space: nowrap;
   min-height: 52px;
+  height: 52px;
+  padding: 0 24px;
+  border-radius: 16px;
 }
 
 .buttons .btn.glow,
+.buttons .btn.ai-cta,
 .buttons .btn.outline {
   min-width: 170px;
 }
@@ -1508,6 +1568,10 @@ body > :where(:not(script, .floating-orb)) {
     justify-content: center;
   }
 
+  .buttons {
+    gap: 14px;
+  }
+
   .about,
   .skills-section,
   .projects-section,
@@ -1597,6 +1661,12 @@ body > :where(:not(script, .floating-orb)) {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    width: 100%;
+  }
+
+  .buttons .btn {
+    width: min(100%, 280px);
+    min-width: 0;
   }
 }
 

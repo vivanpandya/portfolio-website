@@ -115,6 +115,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const heroChatButton = document.getElementById("hero-open-chat");
+
+  heroChatButton?.addEventListener("click", () => {
+    const chatLauncher = document.getElementById("open-chat");
+
+    if (chatLauncher) {
+      chatLauncher.click();
+      heroChatButton.setAttribute("aria-expanded", "true");
+    }
+  });
+
   const navObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

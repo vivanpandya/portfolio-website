@@ -1,0 +1,84 @@
+{
+  "summary": {
+    "title": "Frequently Asked Questions",
+    "description": "Common questions about Vivan Pandya, his education, skills, projects, and career."
+  },
+
+  "faqs": [
+    {
+      "id": 1,
+      "question": "Who is Vivan Pandya?",
+      "answer": "Vivan Pandya is a Computer Science Engineering student at Pandit Deendayal Energy University (PDEU) with interests in Full Stack Development, Artificial Intelligence, Software Engineering, and System Design."
+    },
+    {
+      "id": 2,
+      "question": "What is Vivan currently studying?",
+      "answer": "He is pursuing a Bachelor of Technology (B.Tech.) in Computer Science Engineering at Pandit Deendayal Energy University (PDEU)."
+    },
+    {
+      "id": 3,
+      "question": "When will Vivan graduate?",
+      "answer": "His expected graduation year is 2028."
+    },
+    {
+      "id": 4,
+      "question": "What programming languages does Vivan know?",
+      "answer": "Vivan works with JavaScript, Python, Java, C, SQL, HTML, and CSS."
+    },
+    {
+      "id": 5,
+      "question": "What databases has Vivan used?",
+      "answer": "He has experience with PostgreSQL and MySQL."
+    },
+    {
+      "id": 6,
+      "question": "What projects has Vivan built?",
+      "answer": "Some of his major projects include an AI Portfolio Assistant, a Lost & Found Management System, and a modern personal portfolio website."
+    },
+    {
+      "id": 7,
+      "question": "Does Vivan have internship experience?",
+      "answer": "Currently, Vivan does not have formal internship experience but has developed practical software engineering skills through multiple personal and academic projects."
+    },
+    {
+      "id": 8,
+      "question": "Is Vivan available for internships?",
+      "answer": "Yes. He is actively looking for software engineering internship opportunities."
+    },
+    {
+      "id": 9,
+      "question": "Is Vivan available for freelance work?",
+      "answer": "Yes. He is open to suitable freelance opportunities."
+    },
+    {
+      "id": 10,
+      "question": "Does Vivan prefer remote work?",
+      "answer": "Yes. He is available for remote opportunities."
+    },
+    {
+      "id": 11,
+      "question": "How can I contact Vivan?",
+      "answer": "You can contact him through email, LinkedIn, or GitHub using the contact section of this portfolio."
+    },
+    {
+      "id": 12,
+      "question": "What are Vivan's career goals?",
+      "answer": "His goal is to become a Full Stack Software Engineer specializing in Artificial Intelligence and scalable software systems."
+    },
+    {
+      "id": 13,
+      "question": "What technologies is Vivan currently learning?",
+      "answer": "He is continuously improving his knowledge of Full Stack Development, Artificial Intelligence, System Design, Backend Development, and Cloud Technologies."
+    },
+    {
+      "id": 14,
+      "question": "What makes Vivan a good candidate?",
+      "answer": "He focuses on clean code, modular architecture, continuous learning, real-world projects, and modern software engineering practices."
+    },
+    {
+      "id": 15,
+      "question": "Where can I view Vivan's projects?",
+      "answer": "Projects are available in the Projects section of this portfolio and on his GitHub profile."
+    }
+  ]
+}

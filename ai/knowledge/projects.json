@@ -1,0 +1,166 @@
+{
+  "summary": {
+    "title": "Software Projects",
+    "description": "A collection of software projects developed by Vivan Pandya demonstrating problem solving, full stack development, software architecture, and artificial intelligence."
+  },
+
+  "projects": [
+    {
+      "id": "portfolio-website",
+
+      "name": "Personal Portfolio Website",
+
+      "status": "Completed",
+
+      "type": "Personal Project",
+
+      "description": "A modern responsive portfolio website showcasing education, skills, projects, achievements, certifications, and contact information with an integrated AI assistant.",
+
+      "objective": "Create a professional online portfolio that represents technical skills and projects while providing an interactive recruiter experience.",
+
+      "techStack": {
+        "frontend": [
+          "HTML5",
+          "CSS3",
+          "JavaScript"
+        ],
+        "backend": [],
+        "database": [],
+        "tools": [
+          "Git",
+          "GitHub"
+        ]
+      },
+
+      "features": [
+        "Responsive Design",
+        "Modern Glassmorphism UI",
+        "Animated Hero Section",
+        "Interactive Project Cards",
+        "Achievements Section",
+        "Skills Showcase",
+        "Integrated AI Chatbot",
+        "Contact Form",
+        "Smooth Animations"
+      ],
+
+      "concepts": [
+        "Responsive Design",
+        "UI/UX",
+        "Component Based Design",
+        "Accessibility",
+        "Animation"
+      ],
+
+      "github": null,
+      "liveDemo": null
+    },
+
+    {
+      "id": "lost-found",
+
+      "name": "Lost & Found Management System",
+
+      "status": "Completed",
+
+      "type": "Academic Project",
+
+      "description": "A full stack Lost & Found platform that enables users to report, search, and manage lost or found items through a secure authentication system.",
+
+      "objective": "Provide a centralized platform for managing lost and found items efficiently.",
+
+      "techStack": {
+        "frontend": [
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "backend": [
+          "Python",
+          "Flask"
+        ],
+        "database": [
+          "PostgreSQL"
+        ],
+        "tools": [
+          "Git",
+          "GitHub"
+        ]
+      },
+
+      "features": [
+        "User Authentication",
+        "Secure Login",
+        "Lost Item Reporting",
+        "Found Item Reporting",
+        "Image Upload",
+        "Search Functionality",
+        "Administrator Dashboard",
+        "Database Management"
+      ],
+
+      "concepts": [
+        "Authentication",
+        "Database Design",
+        "REST Architecture",
+        "CRUD Operations",
+        "Backend Development"
+      ],
+
+      "github": null,
+      "liveDemo": null
+    },
+
+    {
+      "id": "portfolio-ai",
+
+      "name": "AI Portfolio Assistant",
+
+      "status": "In Progress",
+
+      "type": "Personal Project",
+
+      "description": "An intelligent AI assistant integrated into the portfolio that answers recruiter and visitor questions using a structured local knowledge base powered by Ollama.",
+
+      "objective": "Provide an interactive AI-powered portfolio experience capable of answering questions about projects, skills, education, achievements, and career goals.",
+
+      "techStack": {
+        "frontend": [
+          "JavaScript"
+        ],
+        "backend": [
+          "Ollama API"
+        ],
+        "database": [
+          "JSON Knowledge Base"
+        ],
+        "tools": [
+          "Ollama"
+        ]
+      },
+
+      "features": [
+        "AI Chatbot",
+        "Knowledge Base",
+        "Recruiter Mode",
+        "Intent Classification",
+        "Conversation Context",
+        "Markdown Rendering",
+        "Typing Indicator",
+        "Quick Actions",
+        "Local AI"
+      ],
+
+      "concepts": [
+        "Artificial Intelligence",
+        "Prompt Engineering",
+        "Context Management",
+        "Software Architecture",
+        "Modular JavaScript"
+      ],
+
+      "github": null,
+      "liveDemo": null
+    }
+  ]
+}

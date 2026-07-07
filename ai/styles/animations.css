@@ -1,0 +1,32 @@
+@keyframes chatPulse {
+  0%, 80%, 100% {
+    transform: translateY(0) scale(0.75);
+    opacity: 0.5;
+  }
+
+  40% {
+    transform: translateY(-3px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes chatWelcomeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chatbot,
+  .chat-welcome-card,
+  .typing-indicator .chat-bubble span {
+    animation: none;
+    transition: none;
+  }
+}

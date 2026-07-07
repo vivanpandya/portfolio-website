@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "title": "Contact Information",
+    "description": "Official contact information for Vivan Pandya."
+  },
+
+  "personal": {
+    "fullName": "Vivan Pandya",
+    "email": "vivan.pandya15@gmail.com",
+    "phone": null,
+    "location": {
+      "country": "India",
+      "city": null,
+      "timezone": "Asia/Kolkata"
+    }
+  },
+
+  "professional": {
+    "linkedin": "https://www.linkedin.com/in/vivan-pandya",
+    "github": "https://github.com/vivanpandya",
+    "portfolio": null,
+    "resume": null
+  },
+
+  "availability": {
+    "openToInternships": true,
+    "openToFreelance": true,
+    "openToFullTime": false,
+    "remoteWork": true,
+    "relocation": false,
+    "preferredWorkMode": [
+      "Remote"
+    ]
+  },
+
+  "preferredCommunication": {
+    "primary": "Email",
+    "secondary": "LinkedIn"
+  },
+
+  "responseTime": {
+    "email": "Within 24-48 hours",
+    "linkedin": "Within 24-48 hours"
+  },
+
+  "socialProfiles": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/vivan-pandya"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/vivanpandya"
+    }
+  ]
+}

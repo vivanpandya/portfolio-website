@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "title": "Professional Certifications",
+    "description": "Professional courses and certifications completed to strengthen technical knowledge and practical software development skills."
+  },
+
+  "certifications": [
+    {
+      "title": "Meta Front-End Developer Professional Certificate",
+      "issuer": "Meta",
+      "platform": "Coursera",
+      "status": "In Progress",
+      "issueDate": null,
+      "credentialId": null,
+      "credentialUrl": null,
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Responsive Web Design",
+        "React",
+        "Git",
+        "Version Control"
+      ]
+    }
+  ],
+
+  "plannedCertifications": [
+    {
+      "title": "NPTEL Certification",
+      "status": "Planned"
+    },
+    {
+      "title": "AWS Cloud Practitioner",
+      "status": "Planned"
+    },
+    {
+      "title": "Google AI Essentials",
+      "status": "Planned"
+    },
+    {
+      "title": "Microsoft Azure Fundamentals (AZ-900)",
+      "status": "Planned"
+    }
+  ],
+
+  "learningPlatforms": [
+    "Coursera",
+    "NPTEL",
+    "Microsoft Learn",
+    "freeCodeCamp",
+    "Udemy"
+  ]
+}

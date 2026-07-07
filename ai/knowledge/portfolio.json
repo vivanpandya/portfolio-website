@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "title": "Vivan Pandya Portfolio Knowledge Base",
+    "version": "1.0.0",
+    "author": "Vivan Pandya",
+    "lastUpdated": "2026-06-27",
+    "description": "Central knowledge index for the AI Portfolio Assistant."
+  },
+
+  "profile": {
+    "name": "Vivan Pandya",
+    "role": "Computer Science Engineering Student",
+    "university": "Pandit Deendayal Energy University (PDEU)",
+    "graduationYear": 2028,
+    "portfolioVersion": "2.0"
+  },
+
+  "knowledgeModules": {
+
+    "about": {
+      "enabled": true,
+      "file": "about.json"
+    },
+
+    "education": {
+      "enabled": true,
+      "file": "education.json"
+    },
+
+    "skills": {
+      "enabled": true,
+      "file": "skills.json"
+    },
+
+    "projects": {
+      "enabled": true,
+      "file": "projects.json"
+    },
+
+    "experience": {
+      "enabled": true,
+      "file": "experience.json"
+    },
+
+    "achievements": {
+      "enabled": true,
+      "file": "achievements.json"
+    },
+
+    "certifications": {
+      "enabled": true,
+      "file": "certifications.json"
+    },
+
+    "contact": {
+      "enabled": true,
+      "file": "contact.json"
+    },
+
+    "faqs": {
+      "enabled": true,
+      "file": "faqs.json"
+    },
+
+    "personality": {
+      "enabled": true,
+      "file": "personality.json"
+    },
+
+    "prompts": {
+      "enabled": true,
+      "file": "prompts.json"
+    }
+
+  },
+
+  "supportedTopics": [
+
+    "About",
+
+    "Education",
+
+    "Skills",
+
+    "Projects",
+
+    "Experience",
+
+    "Achievements",
+
+    "Certifications",
+
+    "Contact",
+
+    "Resume",
+
+    "Career",
+
+    "Technologies"
+
+  ],
+
+  "supportedModes": [
+
+    "Default",
+
+    "Recruiter",
+
+    "Visitor"
+
+  ],
+
+  "capabilities": {
+
+    "conversationMemory": true,
+
+    "intentClassification": true,
+
+    "markdownRendering": true,
+
+    "quickActions": true,
+
+    "typingIndicator": true,
+
+    "localKnowledgeBase": true,
+
+    "offlineAI": true
+
+  },
+
+  "limitations": [
+
+    "Only answers questions related to Vivan Pandya.",
+
+    "Does not provide general-purpose AI assistance.",
+
+    "Never invents information.",
+
+    "Only uses verified portfolio knowledge."
+
+  ]
+}

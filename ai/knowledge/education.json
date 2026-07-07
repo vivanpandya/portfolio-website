@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "title": "Education",
+    "description": "Academic background, coursework, and educational goals of Vivan Pandya."
+  },
+
+  "currentEducation": {
+    "degree": "Bachelor of Technology",
+    "branch": "Computer Science Engineering",
+    "university": "Pandit Deendayal Energy University (PDEU)",
+    "country": "India",
+    "startYear": 2024,
+    "expectedGraduation": 2028,
+    "status": "Pursuing",
+    "cgpa": null
+  },
+
+  "specializations": [
+    "Full Stack Development",
+    "Artificial Intelligence",
+    "Software Engineering",
+    "Backend Development",
+    "Database Systems",
+    "System Design"
+  ],
+
+  "relevantCoursework": [
+    "Data Structures and Algorithms",
+    "Object-Oriented Programming",
+    "Database Management Systems",
+    "Operating Systems",
+    "Computer Networks",
+    "Software Engineering",
+    "Web Development",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "System Design"
+  ],
+
+  "technicalLearning": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Python",
+    "Java",
+    "C Programming",
+    "SQL",
+    "Git",
+    "GitHub",
+    "REST APIs",
+    "PostgreSQL",
+    "MySQL"
+  ],
+
+  "academicGoals": [
+    "Maintain strong academic performance.",
+    "Strengthen software engineering fundamentals.",
+    "Master full stack development.",
+    "Develop AI-powered software solutions.",
+    "Secure a software engineering internship.",
+    "Prepare for technical interviews."
+  ],
+
+  "areasOfInterest": [
+    "Software Engineering",
+    "Artificial Intelligence",
+    "Full Stack Development",
+    "Backend Engineering",
+    "Cloud Computing",
+    "System Design"
+  ]
+}

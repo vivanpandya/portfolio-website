@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "title": "Technical Skills",
+    "description": "Technical skills, tools, and technologies known by Vivan Pandya."
+  },
+
+  "programmingLanguages": [
+    {
+      "name": "Python",
+      "level": "Intermediate",
+      "experience": "Academic Projects"
+    },
+    {
+      "name": "JavaScript",
+      "level": "Intermediate",
+      "experience": "Personal & Academic Projects"
+    },
+    {
+      "name": "Java",
+      "level": "Intermediate",
+      "experience": "Academic"
+    },
+    {
+      "name": "C",
+      "level": "Intermediate",
+      "experience": "Academic"
+    },
+    {
+      "name": "SQL",
+      "level": "Intermediate",
+      "experience": "Database Development"
+    }
+  ],
+
+  "frontend": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Responsive Web Design"
+  ],
+
+  "backend": [
+    "Python",
+    "Flask",
+    "REST API Development"
+  ],
+
+  "databases": [
+    "PostgreSQL",
+    "MySQL"
+  ],
+
+  "versionControl": [
+    "Git",
+    "GitHub"
+  ],
+
+  "developmentTools": [
+    "Visual Studio Code",
+    "Postman",
+    "Ollama"
+  ],
+
+  "softwareEngineering": [
+    "Object-Oriented Programming",
+    "Modular Architecture",
+    "Clean Code",
+    "REST Architecture",
+    "Problem Solving",
+    "Debugging"
+  ],
+
+  "currentlyLearning": [
+    "Artificial Intelligence",
+    "System Design",
+    "Backend Engineering",
+    "Cloud Computing",
+    "Advanced JavaScript"
+  ],
+
+  "softSkills": [
+    "Analytical Thinking",
+    "Problem Solving",
+    "Continuous Learning",
+    "Adaptability",
+    "Communication",
+    "Team Collaboration",
+    "Time Management"
+  ],
+
+  "areasOfInterest": [
+    "Full Stack Development",
+    "Artificial Intelligence",
+    "Software Engineering",
+    "Backend Development",
+    "Database Systems",
+    "System Design"
+  ],
+
+  "strengths": [
+    "Quick Learner",
+    "Strong Problem Solver",
+    "Clean Code Practices",
+    "Modular Software Development",
+    "Self-Motivated",
+    "Attention to Detail"
+  ]
+}

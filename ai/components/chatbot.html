@@ -1,0 +1,126 @@
+<div id="chatbot"
+     class="chatbot"
+     role="dialog"
+     aria-label="AI assistant"
+     aria-modal="false">
+
+    <div class="chatbot-shell">
+
+        <div class="chatbot-header">
+
+            <button
+                id="back-to-welcome"
+                class="chatbot-back"
+                hidden>
+
+                <i class="fas fa-arrow-left"></i>
+
+            </button>
+
+            <div>
+
+                <h3>Vivan AI</h3>
+
+                <p>Ask me anything about Vivan</p>
+
+            </div>
+
+            <button
+                id="close-chat"
+                class="chatbot-close"
+                aria-label="Close chat window">
+
+                <i class="fas fa-times"></i>
+
+            </button>
+
+        </div>
+
+    <div id="chat-window" class="chatbot-window">
+      <section id="chat-welcome" class="chat-welcome" aria-labelledby="chat-welcome-title">
+        <div class="chat-welcome-card">
+          <div class="chat-welcome-icon" aria-hidden="true">
+            <i class="fas fa-hand-sparkles"></i>
+          </div>
+          <h2 id="chat-welcome-title">Welcome to Vivan AI</h2>
+          <p class="chat-welcome-subtitle">I'm your AI Portfolio Assistant.</p>
+          <p class="chat-welcome-copy">I can answer questions about Vivan's projects, skills, education, experience, achievements, certifications, resume, and contact information.</p>
+
+          <div class="chat-start-actions" aria-label="Choose how to start chatting">
+            <button id="start-new-chat" class="chat-start-button primary" type="button" aria-label="Start a fresh conversation">
+              <span class="chat-start-icon" aria-hidden="true">
+                <i class="fas fa-sparkles"></i>
+              </span>
+              <span>
+                <strong>New Chat</strong>
+                <small>Start a fresh conversation.</small>
+              </span>
+            </button>
+            <button id="continue-chat" class="chat-start-button" type="button" aria-label="Continue your last conversation">
+              <span class="chat-start-icon" aria-hidden="true">
+                <i class="fas fa-clock-rotate-left"></i>
+              </span>
+              <span>
+                <strong>Continue Previous Chat</strong>
+                <small>Continue your last conversation.</small>
+              </span>
+            </button>
+          </div>
+
+          <p id="no-chat-history" class="chat-history-empty" hidden>No previous conversations found.</p>
+
+          <div class="chat-welcome-suggestions" aria-label="Suggested portfolio questions">
+            <button type="button" data-welcome-suggestion="Tell me about Vivan's projects.">
+              <i class="fas fa-briefcase" aria-hidden="true"></i>
+              <span>Tell me about Vivan's projects</span>
+            </button>
+            <button type="button" data-welcome-suggestion="What are Vivan's technical skills?">
+              <i class="fas fa-screwdriver-wrench" aria-hidden="true"></i>
+              <span>What are his technical skills?</span>
+            </button>
+            <button type="button" data-welcome-suggestion="Tell me about Vivan's education.">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+              <span>Tell me about his education</span>
+            </button>
+            <button type="button" data-welcome-suggestion="How can I download Vivan's resume?">
+              <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+              <span>Download his resume</span>
+            </button>
+            <button type="button" data-welcome-suggestion="How can I contact Vivan?">
+              <i class="fas fa-address-card" aria-hidden="true"></i>
+              <span>Contact Vivan</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div id="chat-session" class="chat-session" hidden>
+        <div id="chat-messages" class="chatbot-messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+
+        <div id="quick-actions" class="chatbot-quick-actions">
+          <button type="button" class="quick-action" data-quick-action="Tell me about Vivan's projects.">Projects</button>
+          <button type="button" class="quick-action" data-quick-action="What skills does Vivan have?">Skills</button>
+          <button type="button" class="quick-action" data-quick-action="How can I contact Vivan?">Contact</button>
+        </div>
+
+        <div class="chatbot-input-row">
+          <input id="chat-input" type="text" placeholder="Ask me anything about Vivan..." autocomplete="off" aria-label="Ask Vivan AI">
+          <button id="send-message" type="button" aria-label="Send message">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button
+    id="open-chat"
+    class="chatbot-launcher"
+    type="button"
+    aria-controls="chatbot"
+    aria-expanded="false">
+
+    <i class="fas fa-comments"></i>
+
+    <span>Ask AI</span>
+
+</button>

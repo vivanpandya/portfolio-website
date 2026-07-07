@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "title": "Professional Experience",
+    "description": "Current professional and technical experience of Vivan Pandya."
+  },
+
+  "professionalExperience": [],
+
+  "academicExperience": [
+    {
+      "title": "Computer Science Engineering Student",
+      "organization": "Pandit Deendayal Energy University (PDEU)",
+      "employmentType": "Student",
+      "startYear": 2024,
+      "endYear": null,
+      "status": "Ongoing",
+      "description": "Actively developing strong software engineering fundamentals while building real-world projects in Full Stack Development, Artificial Intelligence, Databases, and Software Engineering."
+    }
+  ],
+
+  "projectExperience": [
+    {
+      "title": "AI Portfolio Assistant",
+      "type": "Personal Project",
+      "description": "Developing an AI-powered portfolio assistant using Ollama, modular JavaScript architecture, local knowledge base, and recruiter-focused conversational capabilities."
+    },
+    {
+      "title": "Lost & Found Management System",
+      "type": "Academic Project",
+      "description": "Built a full-stack Lost & Found platform featuring secure authentication, PostgreSQL database integration, image uploads, and administrator management."
+    },
+    {
+      "title": "Personal Portfolio Website",
+      "type": "Personal Project",
+      "description": "Designed and developed a modern portfolio website featuring responsive UI, advanced animations, glassmorphism design, and integrated AI chatbot."
+    }
+  ],
+
+  "openSource": {
+    "contributor": false,
+    "repositories": [],
+    "description": "Currently focusing on personal and academic software projects."
+  },
+
+  "leadership": [],
+
+  "volunteering": [],
+
+  "careerStatus": {
+    "currentRole": "Student",
+    "activelySeekingInternships": true,
+    "availableForFreelancing": true,
+    "openToRemoteWork": true
+  },
+
+  "futureGoals": [
+    "Secure a Software Engineering Internship.",
+    "Contribute to Open Source projects.",
+    "Gain industry experience through real-world software development.",
+    "Build scalable AI-powered applications.",
+    "Become a Full Stack Software Engineer."
+  ]
+}

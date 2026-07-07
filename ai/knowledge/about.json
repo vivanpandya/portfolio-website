@@ -1,0 +1,74 @@
+{
+  "personal": {
+    "fullName": "Vivan Pandya",
+    "title": "Computer Science Engineering Student",
+    "headline": "Aspiring Full Stack Developer | AI & Software Engineering Enthusiast",
+    "location": "India",
+    "university": {
+      "name": "Pandit Deendayal Energy University (PDEU)",
+      "program": "Bachelor of Technology",
+      "branch": "Computer Science Engineering",
+      "graduationYear": 2028
+    }
+  },
+
+  "about": {
+    "short": "Hi, I'm Vivan Pandya, a Computer Science Engineering student passionate about Full Stack Development, Artificial Intelligence, and Software Engineering. I enjoy building modern, scalable, and user-focused web applications while continuously learning new technologies.",
+
+    "medium": "I am a Computer Science Engineering student at Pandit Deendayal Energy University (PDEU). My primary interests include Full Stack Development, Artificial Intelligence, Software Engineering, and System Design. I enjoy solving real-world problems by building practical applications and continuously improving my technical skills through projects and hands-on learning.",
+
+    "long": "I am a Computer Science Engineering student at Pandit Deendayal Energy University (PDEU) with a strong passion for designing scalable software solutions and modern web applications. My areas of interest include Full Stack Development, Artificial Intelligence, Backend Development, Software Architecture, Databases, and System Design. I enjoy learning by building projects that solve practical problems while following clean code practices, modular architecture, and industry standards. My goal is to continuously grow as a software engineer and contribute to impactful products while expanding my expertise in AI-powered applications."
+  },
+
+  "careerObjective": {
+    "short": "To become a skilled Full Stack Software Engineer specializing in AI-powered applications and scalable software systems.",
+
+    "long": "My long-term goal is to build innovative software products that combine Artificial Intelligence with modern Full Stack Development. I aim to continuously improve my technical expertise, contribute to meaningful projects, and work in collaborative engineering environments where I can solve challenging real-world problems."
+  },
+
+  "interests": [
+    "Full Stack Development",
+    "Artificial Intelligence",
+    "Software Engineering",
+    "Backend Development",
+    "Frontend Development",
+    "System Design",
+    "Database Design",
+    "Open Source",
+    "Problem Solving",
+    "Web Technologies"
+  ],
+
+  "strengths": [
+    "Quick Learner",
+    "Problem Solver",
+    "Clean Code Advocate",
+    "Strong Analytical Thinking",
+    "Continuous Learner",
+    "Team Collaboration",
+    "Adaptability"
+  ],
+
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "Professional Working Proficiency"
+    },
+    {
+      "name": "Hindi",
+      "proficiency": "Native Proficiency"
+    },
+    {
+      "name": "Gujarati",
+      "proficiency": "Native Proficiency"
+    }
+  ],
+
+  "availability": {
+    "internship": true,
+    "fullTime": false,
+    "freelance": true,
+    "remote": true,
+    "openToOpportunities": true
+  }
+}
