@@ -1075,7 +1075,17 @@ margin-top:auto;
 
 .skill-card{
 
-flex:0 0 calc((100% - 90px)/3);
+flex:0 0 calc((100% - 25px)/2);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.skill-card{
+
+flex:0 0 100%;
 
 }
 
@@ -1360,6 +1370,26 @@ margin-left:20px;
   box-shadow:
     0 0 30px rgba(99,102,241,0.5),
     0 0 60px rgba(6,182,212,0.25);
+}
+
+@media(max-width:992px){
+
+.projects-track .modern-project-card{
+
+flex:0 0 calc((100% - 35px)/2);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.projects-track .modern-project-card{
+
+flex:0 0 100%;
+
+}
+
 }
 
 /* ===================================== */
@@ -1663,6 +1693,26 @@ min-width:100%;
     transition:.3s;
 
     z-index:100;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.achievement-card{
+
+flex:0 0 calc((100% - 25px)/2);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.achievement-card{
+
+flex:0 0 100%;
 
 }
 
@@ -2172,4 +2222,260 @@ min-width:100%;
   .image-wrapper {
     animation: none;
   }
+}
+
+
+/* ==========================================================
+   RESPONSIVE DESIGN
+========================================================== */
+
+@media (max-width:1200px){
+
+.logo{
+left:0;
+}
+
+.cv-btn{
+right:0;
+}
+
+.navbar nav{
+position:static;
+transform:none;
+}
+
+.hero{
+padding:80px 40px;
+gap:40px;
+}
+
+.hero-center{
+display:none;
+}
+
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:992px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:60px 30px;
+}
+
+.hero-left,
+.hero-right{
+max-width:100%;
+flex:unset;
+}
+
+.hero-left p{
+width:100%;
+}
+
+.about-container{
+flex-direction:column;
+}
+
+.contact-container{
+flex-direction:column;
+}
+
+.projects-track .modern-project-card{
+flex:0 0 calc((100% - 35px)/2);
+}
+
+.skill-card{
+flex:0 0 calc((100% - 25px)/2);
+}
+
+.achievement-card{
+flex:0 0 calc((100% - 25px)/2);
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+body{
+padding-top:75px;
+overflow-x:hidden;
+}
+
+section{
+padding:70px 20px !important;
+}
+
+.hero{
+padding:40px 20px;
+}
+
+.hero-left h1{
+font-size:44px;
+line-height:1.2;
+}
+
+.typing{
+font-size:24px;
+}
+
+.buttons{
+justify-content:center;
+}
+
+.buttons .btn{
+width:100%;
+}
+
+.stats{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.image-wrapper{
+width:260px;
+height:260px;
+}
+
+.navbar-container{
+
+justify-content:space-between;
+
+}
+
+.navbar nav{
+
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+display:flex;
+flex-direction:column;
+background:#020617;
+padding:20px;
+gap:20px;
+transform:translateY(-150%);
+transition:.35s;
+opacity:0;
+
+}
+
+.navbar nav.active{
+
+transform:translateY(0);
+opacity:1;
+
+}
+
+.logo{
+font-size:34px;
+}
+
+.cv-btn{
+display:none;
+}
+
+.projects-track .modern-project-card{
+flex:0 0 100%;
+}
+
+.skill-card{
+flex:0 0 100%;
+height:auto;
+min-height:350px;
+}
+
+.achievement-card{
+flex:0 0 100%;
+}
+
+.projects-arrow,
+.skills-arrow,
+.achievement-arrow{
+
+width:42px;
+height:42px;
+font-size:16px;
+
+}
+
+.about-stats{
+flex-direction:column;
+}
+
+.tags{
+justify-content:center;
+}
+
+.social-icons{
+justify-content:center;
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width:480px){
+
+.hero-left h1{
+
+font-size:36px;
+
+}
+
+.section-title{
+
+font-size:34px;
+
+}
+
+.image-wrapper{
+
+width:220px;
+height:220px;
+
+}
+
+.card{
+
+min-width:90px;
+padding:15px;
+
+}
+
+}
+
+.mobile-menu-toggle{
+
+display:none;
+
+cursor:pointer;
+
+flex-direction:column;
+
+gap:5px;
+
+}
+
+.mobile-menu-toggle span{
+
+width:28px;
+height:3px;
+background:#fff;
+border-radius:5px;
+
+}
+
+@media(max-width:768px){
+
+.mobile-menu-toggle{
+
+display:flex;
+
+}
+
 }

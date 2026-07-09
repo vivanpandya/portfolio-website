@@ -813,3 +813,13 @@ if (document.readyState === "loading") {
 
 })();
 
+
+const menu=document.getElementById("mobileMenuToggle");
+const nav=document.querySelector(".navbar nav");
+
+menu?.addEventListener("click",()=>{
+
+nav.classList.toggle("active");
+
+});
+
