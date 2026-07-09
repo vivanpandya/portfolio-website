@@ -85,6 +85,7 @@ async function loadChatbotComponent() {
                 <div id="chatbot" class="chatbot" role="dialog" aria-label="AI assistant" aria-modal="false">
                     <div class="chatbot-shell">
                         <div class="chatbot-header">
+                            <button id="back-to-welcome" class="chatbot-back" type="button" aria-label="Back to welcome screen" hidden><i class="fas fa-arrow-left"></i></button>
                             <div>
                                 <h3>Vivan AI</h3>
                                 <p>Ask me anything</p>
@@ -123,6 +124,7 @@ async function loadChatbotComponent() {
                                 <div class="chatbot-quick-actions" id="quick-actions">
                                     <button type="button" class="quick-action" data-quick-action="Tell me about Vivan's projects.">Projects</button>
                                     <button type="button" class="quick-action" data-quick-action="What skills does Vivan have?">Skills</button>
+                                    <button type="button" class="quick-action" data-quick-action="How can I contact Vivan?">Contact</button>
                                 </div>
                                 <div class="chatbot-input-row">
                                     <input id="chat-input" type="text" placeholder="Ask me anything about Vivan..." autocomplete="off" aria-label="Ask Vivan AI">

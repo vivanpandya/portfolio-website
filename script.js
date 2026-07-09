@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "AI/ML Engineer",
     "Software Engineer"
   ];
-  const TYPE_SPEED_MS = 120;
-  const DELETE_SPEED_MS = 60;
-  const ROLE_PAUSE_MS = 2000;
+  const TYPE_SPEED_MS = 90;
+  const DELETE_SPEED_MS = 45;
+  const ROLE_PAUSE_MS = 1800;
 
   let roleIndex = 0;
   let charIndex = 0;
@@ -31,25 +31,51 @@ document.addEventListener("DOMContentLoaded", () => {
   const typedText = document.getElementById("typed-text");
 
   function typeEffect() {
-    const currentRole = roles[roleIndex];
 
-    if (isDeleting) {
-      typedText.innerHTML = currentRole.substring(0, charIndex--);
-    } else {
-      typedText.innerHTML = currentRole.substring(0, charIndex++);
-    }
+      const currentRole = roles[roleIndex];
 
-    let nextDelay = isDeleting ? DELETE_SPEED_MS : TYPE_SPEED_MS;
+      if (!isDeleting) {
 
-    if (!isDeleting && charIndex === currentRole.length) {
-      nextDelay = ROLE_PAUSE_MS;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-    }
+          typedText.textContent = currentRole.substring(0, charIndex);
 
-    window.setTimeout(typeEffect, nextDelay);
+          charIndex++;
+
+          if (charIndex > currentRole.length) {
+
+              isDeleting = true;
+
+              setTimeout(typeEffect, ROLE_PAUSE_MS);
+
+              return;
+          }
+
+          setTimeout(typeEffect, TYPE_SPEED_MS);
+
+      }
+
+      else {
+
+          typedText.textContent = currentRole.substring(0, charIndex);
+
+          charIndex--;
+
+          if (charIndex < 0) {
+
+              isDeleting = false;
+
+              roleIndex = (roleIndex + 1) % roles.length;
+
+              charIndex = 0;
+
+              setTimeout(typeEffect, 300);
+
+              return;
+          }
+
+          setTimeout(typeEffect, DELETE_SPEED_MS);
+
+      }
+
   }
 
   if (typedText) {
@@ -507,3 +533,283 @@ if (sphereContainer && window.THREE) {
     }
   });
 }
+
+
+/**
+ * ============================================================================
+ * SKILLS CAROUSEL
+ * ============================================================================
+ *
+ * Vanilla JS carousel for the Skills section.
+ *
+ * Features:
+ * - Left / right arrow navigation
+ * - Mouse drag-to-scroll (touch swipe is handled natively by the browser)
+ * - CSS scroll-snap for smooth, aligned stops
+ * - Seamless infinite looping via a "triple strip" clone technique:
+ *   [clones][real cards][clones], silently re-centered when the user
+ *   scrolls into a cloned region.
+ *
+ * No external libraries.
+ * ============================================================================
+ */
+(function () {
+  "use strict";
+
+  function initCarousel(prefix) {
+    const carousel = document.getElementById(prefix + "Carousel");
+    const viewport = document.getElementById(prefix + "Viewport");
+    const track = document.getElementById(prefix + "Track");
+    const prevButton = document.getElementById(prefix + "Prev");
+    const nextButton = document.getElementById(prefix + "Next");
+
+    if (!carousel || !viewport || !track || !prevButton || !nextButton) {
+      return;
+    }
+
+    const realCards = Array.from(track.querySelectorAll("[data-card]"));
+    const realCount = realCards.length;
+
+    if (realCount === 0) {
+      return;
+    }
+
+    const reduceMotion = window.matchMedia
+      ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      : false;
+
+    /**
+     * Builds one cloned copy of every real card for the infinite-loop buffer.
+     * Clones are hidden from assistive tech and removed from tab order.
+     */
+    function buildCloneSet() {
+      return realCards.map(function (card) {
+        const clone = card.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        clone.setAttribute("tabindex", "-1");
+        clone.removeAttribute("id");
+        clone.removeAttribute("data-card");
+        clone.querySelectorAll("[id]").forEach(function (node) {
+          node.removeAttribute("id");
+        });
+        return clone;
+      });
+    }
+
+    const leadingClones = buildCloneSet();
+    const trailingClones = buildCloneSet();
+
+    track.prepend(...leadingClones);
+    track.append(...trailingClones);
+
+    let cardStep = 0;
+    let currentIndex = realCount;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartScrollLeft = 0;
+    let settleTimer = null;
+
+    /** Measures the pixel distance between two adjacent real cards. */
+    function measure() {
+      const first = realCards[0].getBoundingClientRect();
+
+      if (realCount > 1) {
+        const second = realCards[1].getBoundingClientRect();
+        cardStep = Math.round(Math.abs(second.left - first.left));
+      } else {
+        cardStep = Math.round(first.width);
+      }
+
+      if (!cardStep) {
+        cardStep = Math.round(realCards[0].offsetWidth) || 1;
+      }
+    }
+
+    /** Instantly sets scroll position with no animation. */
+    function jumpTo(scrollLeft) {
+      const previousBehavior = viewport.style.scrollBehavior;
+      viewport.style.scrollBehavior = "auto";
+      viewport.scrollLeft = scrollLeft;
+      viewport.style.scrollBehavior = previousBehavior || "";
+    }
+
+    /** Navigates to an absolute card index within the triple strip. */
+    function goTo(index, options) {
+      const smooth = !reduceMotion && !(options && options.smooth === false);
+
+      currentIndex = index;
+      const left = index * cardStep;
+
+      if (smooth && typeof viewport.scrollTo === "function") {
+        viewport.scrollTo({ left: left, behavior: "smooth" });
+      } else {
+        jumpTo(left);
+      }
+    }
+
+    /** Silently re-centers the strip if the user has scrolled into a clone region. */
+    function handleSettle() {
+      if (isDragging || !cardStep) {
+        return;
+      }
+
+      let changed = false;
+
+      while (currentIndex < realCount) {
+        currentIndex += realCount;
+        changed = true;
+      }
+
+      while (currentIndex >= realCount * 2) {
+        currentIndex -= realCount;
+        changed = true;
+      }
+
+      if (changed) {
+        jumpTo(currentIndex * cardStep);
+      }
+    }
+
+    function scheduleSettleCheck() {
+      window.clearTimeout(settleTimer);
+      settleTimer = window.setTimeout(handleSettle, 220);
+    }
+
+    function goNext() {
+      goTo(currentIndex + 1);
+    }
+
+    function goPrev() {
+      goTo(currentIndex - 1);
+    }
+
+    nextButton.addEventListener("click", goNext);
+    prevButton.addEventListener("click", goPrev);
+
+    carousel.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowRight") {
+        goNext();
+      } else if (event.key === "ArrowLeft") {
+        goPrev();
+      }
+    });
+
+    viewport.addEventListener("scroll", scheduleSettleCheck, { passive: true });
+    if ("onscrollend" in window) {
+      viewport.addEventListener("scrollend", handleSettle);
+    }
+
+    /** Mouse drag-to-scroll. Native touch swipe is left to the browser. */
+    function onPointerDown(event) {
+
+        // Agar button ya link pe click hua hai to drag start mat karo
+        if (event.target.closest("a")) {
+            return;
+        }
+
+        if (event.pointerType === "touch") {
+            return;
+        }
+
+        isDragging = true;
+        dragStartX = event.clientX;
+        dragStartScrollLeft = viewport.scrollLeft;
+        viewport.classList.add("is-dragging");
+
+        if (viewport.setPointerCapture) {
+            viewport.setPointerCapture(event.pointerId);
+        }
+    }
+
+    function onPointerMove(event) {
+
+        if (!isDragging) {
+            return;
+        }
+
+        if (!event.target.closest("a")) {
+            event.preventDefault();
+        }
+
+        const delta = event.clientX - dragStartX;
+        viewport.scrollLeft = dragStartScrollLeft - delta;
+    }
+
+    function endDrag() {
+      if (!isDragging) {
+        return;
+      }
+
+      isDragging = false;
+      viewport.classList.remove("is-dragging");
+
+      if (cardStep) {
+        currentIndex = Math.round(viewport.scrollLeft / cardStep);
+      }
+
+      goTo(currentIndex);
+    }
+
+    viewport.addEventListener("pointerdown", onPointerDown);
+    viewport.addEventListener("pointermove", onPointerMove);
+    viewport.addEventListener("pointerup", endDrag);
+    viewport.addEventListener("pointercancel", endDrag);
+    viewport.addEventListener("pointerleave", function (event) {
+      if (isDragging && event.buttons === 0) {
+        endDrag();
+      }
+    });
+
+    /** Keeps the visible card stable (by relative position) across breakpoint changes. */
+    let resizeTimer = null;
+    window.addEventListener("resize", function () {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(function () {
+        const relativeIndex = ((currentIndex - realCount) % realCount + realCount) % realCount;
+        measure();
+        goTo(realCount + relativeIndex, { smooth: false });
+      }, 150);
+    });
+
+    function init() {
+      measure();
+      goTo(realCount, { smooth: false });
+    }
+
+    init();
+
+    track.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("pointerdown", function(e){
+            e.stopPropagation();
+        });
+
+        link.addEventListener("click", function(e){
+            e.stopPropagation();
+        });
+
+    });
+
+    window.addEventListener("load", measure);
+  }
+
+if (document.readyState === "loading") {
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        initCarousel("skills");
+        initCarousel("projects");
+        initCarousel("achievement");
+
+    });
+
+} else {
+
+    initCarousel("skills");
+    initCarousel("projects");
+    initCarousel("achievement");
+
+}
+
+})();
+

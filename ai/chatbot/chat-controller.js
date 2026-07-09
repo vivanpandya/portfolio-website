@@ -120,7 +120,6 @@ export function startNewChat(initialMessage = "") {
     };
 
     showChatSession();
-    document.getElementById("back-to-welcome").hidden = false;
     renderMessage(welcomeMessage);
     addChatMessage(welcomeMessage);
     addContextMessage(MESSAGE_ROLE.ASSISTANT, welcomeMessage.content);
@@ -149,7 +148,6 @@ export function continuePreviousChat() {
     resetActiveChatState();
     hydrateConversationContext(history);
     showChatSession();
-    document.getElementById("back-to-welcome").hidden = false;
     renderStoredMessages(history);
     scrollToBottom();
     enableInput();

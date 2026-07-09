@@ -8,6 +8,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+    default-src 'self';
+    script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    object-src 'none';
+    frame-ancestors 'none';
+    base-uri 'self';
+    form-action 'self';
+    upgrade-insecure-requests;
+    ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vivan Pandya</title>
 
@@ -90,7 +105,7 @@
         <span>FIND ME ON</span>
 
         <div class="social-icons">
-          <a href="https://github.com/vivanpandya" target="_blank">
+          <a href="https://github.com/vivanpandya" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github"></i>
           </a>
 
@@ -98,7 +113,7 @@
             <i class="fab fa-linkedin"></i>
           </a>
 
-          <a href="#contact">
+          <a href="#contact" rel="noopener noreferrer">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
@@ -226,7 +241,7 @@
 
   </section>
 
-  <!-- ===================================== -->
+<!-- ===================================== -->
   <!-- SKILLS SECTION -->
   <!-- ===================================== -->
   <section id="skills" class="skills-section">
@@ -237,229 +252,582 @@
       My <span class="gradient">Tech Stack</span>
     </h1>
 
-    <div class="skills-container">
-      <div class="skill-card highlight">
-        <div class="icon"><i class="fas fa-code"></i></div>
-        <h3>Programming</h3>
-        <div class="skills-tags">
-          <span>C</span>
-          <span>C++</span>
-          <span>Python</span>
+<div class="skills-carousel" id="skillsCarousel">
+
+    <button class="skills-arrow left" id="skillsPrev">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="skills-viewport" id="skillsViewport">
+
+        <div class="skills-track" id="skillsTrack">
+
+                <div class="skill-card highlight" data-card>
+
+                    <div class="icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <h3>Programming</h3>
+
+                    <p>
+                        Strong foundation in programming, problem solving, algorithms and object-oriented programming using modern languages.
+                    </p>
+
+                    <div class="skills-tags">
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>Python</span>
+                </div>
+            </div>
+
+            <div class="skill-card highlight" data-card>
+                <div class="icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Building responsive, modern and user-friendly websites using frontend technologies and best UI practices.
+                    </p>
+
+                    <div class="skills-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+
+            <div class="skill-card highlight" data-card>
+                <div class="icon"><i class="fas fa-database"></i></div>
+                    <h3>Technologies</h3>
+
+                    <p>
+                        Knowledge of databases, data structures, object-oriented programming and core computer science fundamentals.
+                    </p>
+
+                    <div class="skills-tags">
+                    <span>Data Structures</span>
+                    <span>OOPs</span>
+                    <span>DBMS</span>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+
+            <div class="skill-card highlight" data-card>
+                <div class="icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools</h3>
+
+                    <p>
+                        Daily workflow using Git, GitHub, VS Code, Postman and productivity tools for efficient software development.
+                    </p>
+
+                    <div class="skills-tags">
+                    <span>Git & GitHub</span>
+                    <span>VS Code</span>
+                    <span>Postman</span>
+                    <span>Canva</span>
+                </div>
+            </div>
+
+            <div class="skill-card highlight" data-card>
+                <div class="icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Full Stack</h3>
+
+                    <p>
+                        Developing complete MERN stack applications with REST APIs, authentication and database integration.
+                    </p>
+
+                    <div class="skills-tags">
+                    <span>MERN Stack</span>
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+
+            <div class="skill-card highlight" data-card>
+                <div class="icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Deployment</h3>
+
+                    <p>
+                        Deploying scalable web applications using Vercel, Render and MongoDB Atlas with production-ready configurations.
+                    </p>
+
+                    <div class="skills-tags">
+                    <span>Vercel</span>
+                    <span>Render</span>
+                    <span>MongoDB Atlas</span>
+                </div>
+            </div>
+
         </div>
-      </div>
-      <div class="skill-card highlight">
-        <div class="icon"><i class="fas fa-globe"></i></div>
-        <h3>Web Development</h3>
-        <div class="skills-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-      </div>
-      <div class="skill-card highlight">
-        <div class="icon"><i class="fas fa-database"></i></div>
-        <h3>Technologies</h3>
-        <div class="skills-tags">
-          <span>Data Structures</span>
-          <span>OOPs</span>
-          <span>DBMS</span>
-          <span>MongoDB</span>
-        </div>
-      </div>
-      <div class="skill-card highlight">
-        <div class="icon"><i class="fas fa-tools"></i></div>
-        <h3>Tools</h3>
-        <div class="skills-tags">
-          <span>Git & GitHub</span>
-          <span>VS Code</span>
-          <span>Postman</span>
-          <span>Canva</span>
-        </div>
-      </div>
-      <div class="skill-card highlight">
-        <div class="icon"><i class="fas fa-layer-group"></i></div>
-        <h3>Full Stack</h3>
-        <div class="skills-tags">
-          <span>MERN Stack</span>
-          <span>React.js</span>
-          <span>Node.js</span>
-          <span>Express.js</span>
-          <span>MongoDB</span>
-        </div>
-      </div>
-      <div class="skill-card highlight">
-        <div class="icon"><i class="fas fa-rocket"></i></div>
-        <h3>Deployment</h3>
-        <div class="skills-tags">
-          <span>Vercel</span>
-          <span>Render</span>
-          <span>MongoDB Atlas</span>
-        </div>
-      </div>
+
+    </div>
+
+    <button class="skills-arrow right" id="skillsNext">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+</div>
 
     </div>
 
   </section>
 
-  <!-- ===================================== -->
-  <!-- PROJECTS SECTION -->
-  <!-- ===================================== -->
-  <section id="projects" class="projects-section">
+<!-- ===================================== -->
+<!-- PROJECTS SECTION -->
+<!-- ===================================== -->
+
+<section id="projects" class="projects-section">
 
     <p class="section-tag">PROJECTS</p>
 
     <h1 class="section-title">
-      Digital Product <span>Showcases</span>
+        Digital Product <span>Showcases</span>
     </h1>
 
-    <div class="projects-grid">
-      <div class="modern-project-card">
-        <div class="project-content">
-          <div class="project-top">
-            <span class="project-status working">In Development</span>
-            <h3>AI Chat Manager</h3>
-            <p>
-              AI-powered Chrome extension for organizing and managing conversations across ChatGPT, Gemini, and Claude.
-            </p>
-          </div>
-          <div class="project-tech">
-            <span>JavaScript</span>
-            <span>Chrome APIs</span>
-            <span>AI</span>
-            <span>Backend</span>
-          </div>
-          <div class="project-buttons">
-            <a href="#" class="project-btn github-btn">
-              <i class="fab fa-github"></i>
-              Code
-            </a>
-            <a href="#" class="project-btn live-btn">
-              <i class="fas fa-arrow-up-right-from-square"></i>
-              Live Demo
-            </a>
-          </div>
+    <div class="projects-carousel" id="projectsCarousel">
+
+        <!-- Left Arrow -->
+        <button class="projects-arrow left" id="projectsPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- Viewport -->
+        <div class="projects-viewport" id="projectsViewport">
+
+            <!-- Track -->
+            <div class="projects-track" id="projectsTrack">
+
+                <!-- ================= Portfolio ================= -->
+
+                <div class="modern-project-card" data-card>
+
+                    <div class="project-content">
+
+                        <div class="project-top">
+
+                            <span class="project-status completed">
+                                Portfolio
+                            </span>
+
+                            <h3>Personal Portfolio</h3>
+
+                            <p>
+                                Modern responsive portfolio website built with HTML,
+                                CSS and JavaScript featuring premium UI, AI chatbot
+                                integration, animations and interactive effects.
+                            </p>
+
+                        </div>
+
+                        <div class="project-tech">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Three.js</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                                <a
+                                    href="https://github.com/vivanpandya/portfolio-website.git"
+                                    class="project-btn github-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+
+                                <a
+                                    href="https://vivanpandya.github.io/portfolio-website/"
+                                    class="project-btn live-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                    Live Demo
+
+                                </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= AI Chat ================= -->
+
+                <div class="modern-project-card" data-card>
+
+                    <div class="project-content">
+
+                        <div class="project-top">
+
+                            <span class="project-status working">
+                                In Development
+                            </span>
+
+                            <h3>AI Chat Manager</h3>
+
+                            <p>
+                                AI-powered Chrome extension for organizing and managing conversations across ChatGPT, Gemini, and Claude.
+                            </p>
+
+                        </div>
+
+                        <div class="project-tech">
+
+                            <span>JavaScript</span>
+                            <span>Chrome APIs</span>
+                            <span>AI</span>
+                            <span>Backend</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                                <a
+                                    href="https://github.com/vivanpandya/AI-Chat-Manager"
+                                    class="project-btn github-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+
+                                <a
+                                    href="https://your-live-demo-link.com"
+                                    class="project-btn live-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                    Live Demo
+
+                                </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= Lost & Found ================= -->
+
+                <div class="modern-project-card" data-card>
+
+                    <div class="project-content">
+
+                        <div class="project-top">
+
+                            <span class="project-status completed">
+                                Completed
+                            </span>
+
+                            <h3>Lost & Found System</h3>
+
+                            <p>
+                                Android-based lost and found platform with advanced search, tracking, and communication features.
+                            </p>
+
+                        </div>
+
+                        <div class="project-tech">
+
+                            <span>Android</span>
+                            <span>Firebase</span>
+                            <span>SQLite</span>
+                            <span>Java</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                                <a
+                                    href="https://github.com/lucifer-27/Lost-and-found.git"
+                                    class="project-btn github-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+
+                                <a
+                                    href="https://lost-and-found-92k0.onrender.com/"
+                                    class="project-btn live-btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+
+                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                    Live Demo
+
+                                </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= NASA ================= -->
+
+                <div class="modern-project-card" data-card>
+
+                    <div class="project-content">
+
+                        <div class="project-top">
+
+                            <span class="project-status completed">
+                                NASA Challenge
+                            </span>
+
+                            <h3>Meteor Madness</h3>
+
+                            <p>
+                                Disaster simulation platform using NASA APIs for asteroid and earthquake impact visualization.
+                            </p>
+
+                        </div>
+
+                        <div class="project-tech">
+
+                            <span>NASA APIs</span>
+                            <span>Leaflet.js</span>
+                            <span>JavaScript</span>
+                            <span>Maps</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                        <a
+                            href="https://github.com/vivanpandya/Astro-Impact-Simulator-Meteor-Madness-.git"
+                            class="project-btn github-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="fab fa-github"></i>
+                            Code
+                        </a>
+
+                            <a
+                                href="https://vivanpandya.github.io/Astro-Impact-Simulator-Meteor-Madness-/"
+                                class="project-btn live-btn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                                Live Demo
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- End Track -->
+
         </div>
-      </div>
-      <div class="modern-project-card">
-        <div class="project-content">
-          <div class="project-top">
-            <span class="project-status completed">Completed</span>
-            <h3>Lost & Found System</h3>
-            <p>
-              Android-based lost and found platform with advanced search, tracking, and communication features.
-            </p>
-          </div>
-          <div class="project-tech">
-            <span>Android</span>
-            <span>Firebase</span>
-            <span>SQLite</span>
-            <span>Java</span>
-          </div>
-          <div class="project-buttons">
-            <a href="#" class="project-btn github-btn">
-              <i class="fab fa-github"></i>
-              Code
-            </a>
-            <a href="#" class="project-btn live-btn">
-              <i class="fas fa-arrow-up-right-from-square"></i>
-              Live Demo
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="modern-project-card">
-        <div class="project-content">
-          <div class="project-top">
-            <span class="project-status completed">NASA Challenge</span>
-            <h3>Meteor Madness</h3>
-            <p>
-              Disaster simulation platform using NASA APIs for asteroid and earthquake impact visualization.
-            </p>
-          </div>
-          <div class="project-tech">
-            <span>NASA APIs</span>
-            <span>Leaflet.js</span>
-            <span>JavaScript</span>
-            <span>Maps</span>
-          </div>
-          <div class="project-buttons">
-            <a href="#" class="project-btn github-btn">
-              <i class="fab fa-github"></i>
-              Code
-            </a>
-            <a href="#" class="project-btn live-btn">
-              <i class="fas fa-arrow-up-right-from-square"></i>
-              Live Demo
-            </a>
-          </div>
-        </div>
-      </div>
+        <!-- End Viewport -->
+
+        <!-- Right Arrow -->
+        <button class="projects-arrow right" id="projectsNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
 
     </div>
 
-  </section>
+</section>
 
   <!-- ===================================== -->
-  <!-- ACHIEVEMENTS SECTION -->
-  <!-- ===================================== -->
-  <section id="achievements" class="achievements-section">
+<!-- ACHIEVEMENTS SECTION -->
+<!-- ===================================== -->
+
+<section id="achievements" class="achievements-section">
 
     <p class="section-tag">ACHIEVEMENTS</p>
 
     <h1 class="section-title">
-      Achievements & <span>Recognition</span>
+        Achievements & <span>Recognition</span>
     </h1>
 
-    <div class="achievements-container">
-      <div class="achievement-card highlight">
-        <div class="icon-box">
-          <i class="fas fa-rocket"></i>
+    <div class="achievements-carousel" id="achievementCarousel">
+
+        <button class="achievement-arrow left" id="achievementPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="achievements-viewport" id="achievementViewport">
+
+
+            <div class="achievements-track" id="achievementTrack">
+
+                <!-- ================= NASA ================= -->
+
+                <div class="achievement-card highlight" data-card>
+
+                    <div class="icon-box">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+
+                    <h3>NASA Space Apps Challenge 2025</h3>
+
+                    <span class="achievement-date">2025</span>
+
+                    <p>
+                        Developed <strong>Meteor Madness</strong>, an interactive disaster
+                        simulation platform using NASA NEO APIs and real-time mapping.
+                        Recognized for innovative problem solving and technical execution.
+                    </p>
+
+                    <div class="achievement-tags">
+                        <span><i class="fas fa-trophy"></i> Global Competition</span>
+                        <span><i class="fas fa-satellite"></i> NASA APIs</span>
+                        <span><i class="fas fa-earth-americas"></i> Real-world Impact</span>
+                    </div>
+
+                </div>
+
+                <!-- ================= Galactic ================= -->
+
+                <div class="achievement-card highlight" data-card>
+
+                    <div class="icon-box">
+                        <i class="fas fa-award"></i>
+                    </div>
+
+                    <h3>Galactic Problem Solver Certification</h3>
+
+                    <span class="achievement-date">2025</span>
+
+                    <p>
+                        Awarded for exceptional technical innovation and problem-solving
+                        during NASA Space Apps Challenge with outstanding project execution.
+                    </p>
+
+                    <div class="achievement-tags">
+                        <span><i class="fas fa-award"></i> Recognition</span>
+                        <span><i class="fas fa-brain"></i> Innovation</span>
+                        <span><i class="fas fa-bolt"></i> Fast Execution</span>
+                    </div>
+
+                    <div class="achievement-actions">
+
+                        <a
+                            href="assets/nasa-certificate.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="achievement-btn">
+
+                            <i class="fas fa-file-pdf"></i>
+                            View Certificate
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= Meta ================= -->
+
+                <div class="achievement-card highlight" data-card>
+
+                    <div class="icon-box">
+                        <i class="fab fa-meta"></i>
+                    </div>
+
+                    <h3>Meta Full Stack Development Professional Certificate</h3>
+
+                    <span class="achievement-date">Coursera</span>
+
+                    <p>
+                        Successfully completed Meta's Full Stack Development Professional
+                        Certificate covering HTML, CSS, JavaScript, React, Node.js,
+                        Express, Databases and modern full-stack application development.
+                    </p>
+
+                    <div class="achievement-tags">
+
+                        <span><i class="fab fa-react"></i> React</span>
+
+                        <span><i class="fab fa-node-js"></i> Node.js</span>
+
+                        <span><i class="fas fa-database"></i> Databases</span>
+
+                    </div>
+
+                    <div class="achievement-actions">
+
+                        <a
+                            href="assets/certificates/Meta_Full_Stack_Certificate.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="achievement-btn">
+
+                            <i class="fas fa-file-pdf"></i>
+
+                            View Certificate
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- ================= Learning ================= -->
+
+                <div class="achievement-card highlight" data-card>
+
+                    <div class="icon-box">
+                        <i class="fas fa-code"></i>
+                    </div>
+
+                    <h3>Advanced Development Skills</h3>
+
+                    <span class="achievement-date">Ongoing</span>
+
+                    <p>
+                        Continuously expanding expertise in Full Stack Development,
+                        Artificial Intelligence, Software Engineering and scalable web
+                        application architecture through hands-on projects.
+                    </p>
+
+                    <div class="achievement-tags">
+
+                        <span><i class="fas fa-book"></i> Self Learning</span>
+
+                        <span><i class="fas fa-laptop-code"></i> Full Stack</span>
+
+                        <span><i class="fas fa-arrow-trend-up"></i> Continuous Growth</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <h3>NASA Space Apps Challenge 2025</h3>
-        <span class="achievement-date">2025</span>
-        <p>
-          Developed "Meteor Madness" - an interactive disaster simulation platform using NASA NEO data and real-time mapping APIs. Recognized for innovative approach to space-related problem solving.
-        </p>
-        <div class="achievement-tags">
-          <span><i class="fas fa-trophy"></i> Global Competition</span>
-          <span><i class="fas fa-satellite"></i> NASA APIs</span>
-          <span><i class="fas fa-earth-americas"></i> Real-world Impact</span>
-        </div>
-      </div>
-      <div class="achievement-card highlight">
-        <div class="icon-box">
-          <i class="fas fa-award"></i>
-        </div>
-        <h3>Galactic Problem Solver Certification</h3>
-        <span class="achievement-date">2025</span>
-        <p>
-          Awarded for exceptional problem-solving skills and technical innovation during the NASA Space Apps Challenge. Demonstrated ability to work under pressure and deliver high-quality solutions.
-        </p>
-        <div class="achievement-tags">
-          <span><i class="fas fa-award"></i> Recognition</span>
-          <span><i class="fas fa-brain"></i> Innovation</span>
-          <span><i class="fas fa-bolt"></i> Fast Execution</span>
-        </div>
-      </div>
-      <div class="achievement-card highlight">
-        <div class="icon-box">
-          <i class="fas fa-code"></i>
-        </div>
-        <h3>Advanced Development Skills</h3>
-        <span class="achievement-date">Ongoing</span>
-        <p>
-          Continuously expanding expertise in modern web technologies, AI/ML frameworks, and software engineering best practices. Committed to staying at the forefront of technological advancement.
-        </p>
-        <div class="achievement-tags">
-          <span><i class="fas fa-book"></i> Self-Learning</span>
-          <span><i class="fas fa-rocket"></i> Tech Enthusiast</span>
-          <span><i class="fas fa-arrows-rotate"></i> Continuous Growth</span>
-        </div>
-      </div>
+
+        <button class="achievement-arrow right" id="achievementNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
 
     </div>
 
-  </section>
+</section>
 
   <!-- ===================================== -->
   <!-- CONTACT SECTION -->
@@ -487,14 +855,14 @@
 
         <div class="contact-box">
           <i class="fab fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/vivan-pandya-6b9199327/" target="_blank">
+          <a href="https://www.linkedin.com/in/vivan-pandya-6b9199327/" target="_blank" rel="noopener noreferrer">
             Vivan Pandya
           </a>
         </div>
 
         <div class="contact-box">
           <i class="fab fa-github"></i>
-          <a href="https://github.com/vivanpandya" target="_blank">
+          <a href="https://github.com/vivanpandya" target="_blank" rel="noopener noreferrer">
             github.com/vivanpandya
           </a>
         </div>

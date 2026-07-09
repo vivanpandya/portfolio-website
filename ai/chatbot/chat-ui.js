@@ -90,10 +90,12 @@ function registerEvents() {
         openChat
     );
 
-    heroOpenButton?.addEventListener(
-        "click",
-        openChat
-    );
+    // NOTE: The hero "Ask Vivan AI" button (#hero-open-chat) is intentionally
+    // NOT bound to openChat() here. script.js (outside this module) already
+    // forwards hero button clicks to the #open-chat launcher via a synthetic
+    // click, and that launcher is bound to openChat() above. Binding
+    // heroOpenButton directly here as well caused openChat() to run twice
+    // for every single hero button click.
 
     closeButton?.addEventListener(
         "click",
@@ -122,6 +124,12 @@ function registerEvents() {
 export function openChat() {
 
     if (!chatContainer) {
+
+        return;
+
+    }
+
+    if (isOpen) {
 
         return;
 
@@ -206,5 +214,3 @@ export function getChatContainer() {
     return chatContainer;
 
 }
-
-

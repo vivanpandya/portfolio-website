@@ -1,10 +1,13 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "<div align=\"center\">",
+  "description": "Personal portfolio website",
   "main": "index.html",
   "scripts": {
-    "serve": "python run.py"
+    "serve": "python run.py",
+    "start": "python run.py",
+    "audit": "npm audit",
+    "audit-fix": "npm audit fix"
   },
   "repository": {
     "type": "git",
